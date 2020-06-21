@@ -3,6 +3,8 @@ package cn.hiboot.mvc.bean;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 
 /**
  * describe about this class
@@ -12,7 +14,8 @@ import lombok.Setter;
  */
 @Setter
 @Getter
-public class DemoBean {
+@XmlRootElement
+public class MyData {
     private String name;
 
     private Integer age;
