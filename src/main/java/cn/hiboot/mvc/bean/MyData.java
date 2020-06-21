@@ -2,6 +2,7 @@ package cn.hiboot.mvc.bean;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -14,9 +15,10 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Setter
 @Getter
+@ToString
 @XmlRootElement
 public class MyData {
     private String name;
-
     private Integer age;
+    private String all;
 }
