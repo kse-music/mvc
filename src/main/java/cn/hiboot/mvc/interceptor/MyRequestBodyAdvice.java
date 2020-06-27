@@ -1,4 +1,4 @@
-package cn.hiboot.mvc.conf;
+package cn.hiboot.mvc.interceptor;
 
 import cn.hiboot.mvc.bean.MyData;
 import org.springframework.core.MethodParameter;

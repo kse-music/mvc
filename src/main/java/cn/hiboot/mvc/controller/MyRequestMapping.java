@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.support.RequestContextUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -80,6 +82,22 @@ public class MyRequestMapping {
     public String redirectTargetView(Model model) {
         model.addAttribute("second","重定向后属性");
         return "viewView";
+    }
+
+    @GetMapping("locale")
+    public String locale() {
+        return "localeView";
+    }
+
+    @GetMapping("theme")
+    public String theme() {
+        return "themeView";
+    }
+
+    @GetMapping("changeTheme")
+    public String changeTheme(HttpServletRequest request, HttpServletResponse response) {
+        RequestContextUtils.getThemeResolver(request).setThemeName(request,response,"other");
+        return "themeView";
     }
 
 }

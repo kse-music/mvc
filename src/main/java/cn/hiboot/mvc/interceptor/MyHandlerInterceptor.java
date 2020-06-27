@@ -1,4 +1,4 @@
-package cn.hiboot.mvc.conf;
+package cn.hiboot.mvc.interceptor;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
